@@ -6,7 +6,6 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "clean": "rimraf dist",
-        "postinstall": "npm run build",
         "build": "NODE_ENV=production npm run clean && webpack -p",
         "serve": "webpack-dev-server",
         "deploy": "npm run build && surge -p dist"

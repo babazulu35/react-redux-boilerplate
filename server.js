@@ -13,5 +13,4 @@ if (process.env.NODE_ENV !== 'production') {
         res.sendFile(path.join(__dirname, 'dist/index.html'));
     })
 }
-
 app.listen(process.env.PORT || 3050, () => console.log("Listening..."));
