@@ -1,10 +1,33 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
-import {Provider} from 'react-redux';
-import 'semantic-ui-css/semantic.min';
 
+/* REACT */
+import React from 'react'
+import ReactDOM from 'react-dom';
+
+/* Routes */
+import { BrowserRouter } from 'react-router-dom';
+
+/* REDUX */
+import { applyMiddleware, createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './reducers';
+import logger from 'redux-logger';
+
+
+
+/* Demo Actions */
+import { loadTestPage } from './actions';
+
+/* App */
 import App from './App';
+
+/* ThirdPart React Lib */
+
+
+/* Middleware */
+const middleware = applyMiddleware(logger);
+ 
+/* REDUX Store */
+const store = createStore(rootReducer,middleware);
 
 ReactDOM.render(
     <BrowserRouter>
@@ -13,4 +36,4 @@ ReactDOM.render(
         </Provider>
     </BrowserRouter>,
     document.getElementById('root')
-)
+);

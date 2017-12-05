@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
-import {NavLink,Route} from 'react-router-dom';
-import {Container} from 'semantic-ui-react';
+
+/* Routes */
+import { withRouter } from 'react-router-dom';
+import Routes from './routes';
 
 class App extends Component {
     render(){
         return(
-            <Container>
-                <h1>Hello Semantic</h1>
-            </Container>
-        )
+                <div>
+                    <h1>Hello Semantic</h1>
+                    <Routes/>
+                </div>
+        );
     }
 }
 
+export default withRouter(App);

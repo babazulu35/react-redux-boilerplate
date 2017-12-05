@@ -4,5 +4,8 @@
         "babel-preset-env",
         "react",
         "stage-1"
+    ],
+    "plugins": [
+        ["lodash", { "id": ["lodash", "semantic-ui-react"] }]
     ]
 }

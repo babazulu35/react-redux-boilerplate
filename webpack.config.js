@@ -4,7 +4,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 
 const VENDOR_LIBS = [
     'react', 'react-dom', 'axios', 'redux', 'react-redux', 'redux-form', 'redux-promise', 'redux-thunk', 'react-router-dom',
-]
+];
 
 module.exports = {
     entry: {
@@ -33,6 +33,9 @@ module.exports = {
         }),
         new htmlWebpackPlugin({
             template: './public/index.html'
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         })
     ]
 
